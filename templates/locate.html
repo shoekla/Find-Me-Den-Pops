@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://getbootstrap.com/2.3.2/examples/hero.html -->
+<html lang="en"><head>
+   
+    <title>Den Pop Locater</title>
+  
+<link rel="shortcut icon" href="piggy.png" type="image/png" >
+<link rel="shortcut icon" href="{{ url_for('static', filename='piggy.png') }}">
+    <!-- Le styles -->
+    <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+
+
+#conA {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+   /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 70px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+</style>
+                                
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/" style="color: white">Den<span style="color:#33CC33">Pops</span></a>
+          <div class="nav-collapse collapse" style="float:right">
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+              <!--style="color:#FF69B4"-->
+             <li><a href="/about" >About</a></li>
+              <li><a href="mailto:abirshukla@gmail.com">Contact</a></li>
+
+               <li class="active"><a href="/locate">Den Pop Locater</a></li>
+                  <li><a href="/add">Add a Den Pop</a></li>
+            </ul>
+           
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="container">
+
+      <center>  <h2>Den<span style="color:#33CC33">Pops</span></h2>
+        <hr>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3037.3428748859396!2d-86.90814499999999!3d40.423406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8812e2aed99721e9%3A0xfe1af600b781d407!2sDiscount+Den%2C+Chauncey+Hill+Mall%2C+135+S+Chauncey+Ave+%231J%2C+West+Lafayette%2C+IN+47906%2C+United+States!3m2!1d40.423406!2d-86.90814499999999!5e0!3m2!1sen!2sus!4v1440805163783" width="1000" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </center>
+           <!--  <input type="text" name="text" placeholder="Enter URL (Search Query Coming Soon!)" style="width:50%">
+
+            <br/> 
+               <a data-toggle="modal" href="#URL">URL or Search Query?</a><br/>
+               <input type="submit" style="visibility: hidden;"/>
+        </form>-->
+  <!--
+<a href="/lucky"><button>I'm Feeling Luck</button></a>-->
+
+</div>
+  <!-- /container -->  
+<p><br/>
+   <div id="footer"><br/>
+      <div class="container">
+             <p class="muted credit">Developed By: <a href="/about" style="color:#33CC33">Abir Shukla</a>
+          <span style="float:right"><a href="https://www.facebook.com/thesportsdenpage?_rdr=p">Discount Den</a> is the Home of Den Pops</span>
+        </p>
+      </div>
+    </div>
+
+
+     
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+  
+
+</body></html>

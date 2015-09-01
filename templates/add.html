@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://getbootstrap.com/2.3.2/examples/hero.html -->
+<html lang="en"><head>
+   
+    <title>Add a Den Pop</title>
+  
+<link rel="shortcut icon" href="piggy.png" type="image/png" >
+<link rel="shortcut icon" href="{{ url_for('static', filename='piggy.png') }}">
+    <!-- Le styles -->
+    <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+
+
+#conA {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+   /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 70px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+</style>
+                                
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/" style="color: white">Den<span style="color:#33CC33">Pops</span></a>
+          <div class="nav-collapse collapse" style="float:right">
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+              <!--style="color:#FF69B4"-->
+             <li><a href="/about" >About</a></li>
+              <li><a href="mailto:abirshukla@gmail.com">Contact</a></li>
+
+               <li><a href="/locate">Den Pop Locater</a></li>
+                  <li class="active"><a href="/add">Add a Den Pop</a></li>
+            </ul>
+           
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="container">
+ <div class="row">
+      <div class="span4">
+        <h3> <u>Add Your Den Pop</u></h3>
+        <p style="color:red">{{message}}</p>
+    <!--
+<a href="/lucky"><button>I'm Feeling Luck</button></a>-->
+ 
+   <form action="/add/" method="POST">
+           <!--  <input type="text" name="text" placeholder="Enter URL (Search Query Coming Soon!)" style="width:50%">
+
+            <br/> 
+               <a data-toggle="modal" href="#URL">URL or Search Query?</a><br/>
+               <input type="submit" style="visibility: hidden;"/>
+        </form>-->
+       <input type="text" name="name" placeholder="Name of Den-Pop" style="width:50%">
+          <p>First Soda:  <select name="soda1">
+<option value="Diet Coke">Diet Coke</option>    
+<option value="Diet Coke Caffeine Free">Diet Coke Caffeine Free</option>
+<option value="Coke Cherry">Coke Cherry</option>
+<option value="Coke">Coke</option>
+<option value="Coke Zero">Coke Zero</option>
+<option value="Red Cream Soda">Red Cream Soda</option>
+<option value="Root Beer">Root Beer</option>
+<option value="Red Powerade">Red Powerade</option>
+<option value="Blue Powerade">Blue Powerade</option>
+<option value="Lemonade">Lemonade</option>
+<option value="Pink Lemonade">Pink Lemonade</option>
+<option value="Dr. Pepper">Dr. Pepper</option>
+<option value="Diet Dr. Pepper">Diet Dr. Pepper</option>
+<option value="Diet Dr. Pepper">Diet Dr. Pepper</option>
+<option value="Fruit Punch">Fruit Punch</option>
+<option value="Orange Gatorade">Orange Gatorade</option>
+<option value="Crush">Crush</option>
+<option value="Diet Pepsi">Diet Pepsi</option>
+<option value="Pepsi">Pepsi</option>
+<option value="Mountain Dew Code Red">Mountain Dew Code Red</option>
+<option value="Diet Mountain Dew">Diet Mountain Dew</option>
+<option value="Mountain Dew">Mountain Dew</option>
+<option value="Sprite">Sprite</option>
+</select> <br/>Amount: <select name="amount1">
+
+<option value="0">0% (No Other Soda)</option>
+<option value=1>10%</option>
+<option value=2>20%</option>
+<option value=3>30%</option>
+<option value=4>40%</option>
+<option value=5>50%</option>
+<option value=6>60%</option>
+<option value=7>70%</option>
+<option value=8>80%</option>
+<option value=9>90%</option>
+<option value=10>100%</option>
+
+</select>
+</p>
+
+<br/>
+  <p>Second Soda:  <select name="soda2">
+<option value="Diet Coke">Diet Coke</option>    
+<option value="Diet Coke Caffeine Free">Diet Coke Caffeine Free</option>
+<option value="Coke Cherry">Coke Cherry</option>
+<option value="Coke">Coke</option>
+<option value="Coke Zero">Coke Zero</option>
+<option value="Red Cream Soda">Red Cream Soda</option>
+<option value="Root Beer">Root Beer</option>
+<option value="Red Powerade">Red Powerade</option>
+<option value="Blue Powerade">Blue Powerade</option>
+<option value="Lemonade">Lemonade</option>
+<option value="Pink Lemonade">Pink Lemonade</option>
+<option value="Dr. Pepper">Dr. Pepper</option>
+<option value="Diet Dr. Pepper">Diet Dr. Pepper</option>
+<option value="Diet Dr. Pepper">Diet Dr. Pepper</option>
+<option value="Fruit Punch">Fruit Punch</option>
+<option value="Orange Gatorade">Orange Gatorade</option>
+<option value="Crush">Crush</option>
+<option value="Diet Pepsi">Diet Pepsi</option>
+<option value="Pepsi">Pepsi</option>
+<option value="Mountain Dew Code Red">Mountain Dew Code Red</option>
+<option value="Diet Mountain Dew">Diet Mountain Dew</option>
+<option value="Mountain Dew">Mountain Dew</option>
+<option value="Sprite">Sprite</option>
+
+<option value="No Other Soda">No Other Soda</option>
+
+</select> <br/>Amount: <select name="amount2">
+
+<option value="0">0% (No Other Soda)</option>
+<option value=1>10%</option>
+<option value=2>20%</option>
+<option value=3>30%</option>
+<option value=4>40%</option>
+<option value=5>50%</option>
+<option value=6>60%</option>
+<option value=7>70%</option>
+<option value=8>80%</option>
+<option value=9>90%</option>
+<option value=10>100%</option>
+
+</select></p><br/>
+  <p>Third Soda:  <select name="soda3">
+<option value="Diet Coke">Diet Coke</option>    
+<option value="Diet Coke Caffeine Free">Diet Coke Caffeine Free</option>
+<option value="Coke Cherry">Coke Cherry</option>
+<option value="Coke">Coke</option>
+<option value="Coke Zero">Coke Zero</option>
+<option value="Red Cream Soda">Red Cream Soda</option>
+<option value="Root Beer">Root Beer</option>
+<option value="Red Powerade">Red Powerade</option>
+<option value="Blue Powerade">Blue Powerade</option>
+<option value="Lemonade">Lemonade</option>
+<option value="Pink Lemonade">Pink Lemonade</option>
+<option value="Dr. Pepper">Dr. Pepper</option>
+<option value="Diet Dr. Pepper">Diet Dr. Pepper</option>
+<option value="Diet Dr. Pepper">Diet Dr. Pepper</option>
+<option value="Fruit Punch">Fruit Punch</option>
+<option value="Orange Gatorade">Orange Gatorade</option>
+<option value="Crush">Crush</option>
+<option value="Diet Pepsi">Diet Pepsi</option>
+<option value="Pepsi">Pepsi</option>
+<option value="Mountain Dew Code Red">Mountain Dew Code Red</option>
+<option value="Diet Mountain Dew">Diet Mountain Dew</option>
+<option value="Mountain Dew">Mountain Dew</option>
+<option value="Sprite">Sprite</option>
+
+<option value="No Other Soda">No Other Soda</option>
+
+</select><br/> Amount: <select name="amount3">
+<option value="0">0% (No Other Soda)</option>
+<option value=1>10%</option>
+<option value=2>20%</option>
+<option value=3>30%</option>
+<option value=4>40%</option>
+<option value=5>50%</option>
+<option value=6>60%</option>
+<option value=7>70%</option>
+<option value=8>80%</option>
+<option value=9>90%</option>
+<option value=10>100%</option>
+
+</select></p><br/>
+ <p>Alcohol???:  <select name="qa">
+
+<option value="n">No Alcohol in this Drink</option>
+
+<option value="y">Alcohol in this Drink</option>
+
+
+</select>
+</p>
+        <br/>
+        <input type="submit" name="my-form1" value="Add my Den-Pop"/>
+
+
+ <!--
+<a href="/lucky"><button>I'm Feeling Luck</button></a>-->
+</div>
+   
+   <br/><br/>
+<center>
+<textarea name="ing" style="width: 780px; height: 350px;" placeholder="Enter Ingredients, Comments and Anything you want other users to see..."></textarea></center><br/>
+<p>
+       <input type="text" name="creator" placeholder="Who is the creator" style="width:300px">
+
+       <input type="text" name="cLink" placeholder="Social Media Link or Keep blank and watch Magic!"style="width:350px">
+</p>
+
+    </form>
+</div></div><!-- /container -->  
+<p><br/><br/><br/>
+   <div id="footer"><br/>
+      <div class="container">
+             <p class="muted credit">Developed By: <a href="/about" style="color:#33CC33">Abir Shukla</a>
+          
+          <span style="float:right"><a href="https://www.facebook.com/thesportsdenpage?_rdr=p">Discount Den</a> is the Home of Den Pops</span>
+        </p>
+      </div>
+    </div>
+
+
+     
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+  
+
+</body></html>
